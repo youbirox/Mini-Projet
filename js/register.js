@@ -9,11 +9,17 @@ var UserGrade
 var UserAdresse
 var UserTelephone
 
+function redirect()
+{
+    location.replace("login.html")
+}
 
 // Fonction D'ajout
 function  adddata()
 {
 
+    
+ 
     // Récupération des valeurs
     var nom = document.getElementById("nom").value;
     var prenom = document.getElementById("prenom").value;
@@ -24,29 +30,40 @@ function  adddata()
     var adresse = document.getElementById("adresse").value;
     var telephone = document.getElementById("telephone").value;
 
+   // Vérification si l'email exsite déja
+   var UserLoginV = window.localStorage.getItem('UserEmail');
 
-    // Initialisation
-    UserNom=nom
-    UserPrenom=prenom
-    UserLogin=email
-    UserPassword=password
-    UserEmail=email
-    UserAge=age
-    UserGrade=grade
-    UserAdresse=adresse
-    UserTelephone =telephone
-    //alert(table)
+   if (UserLoginV == email) {
+    document.getElementById("AlertV").style.display="block";
+   }else
+   {
+ // Initialisation
+ UserNom=nom
+ UserPrenom=prenom
+ UserLogin=email
+ UserPassword=password
+ UserEmail=email
+ UserAge=age
+ UserGrade=grade
+ UserAdresse=adresse
+ UserTelephone =telephone
+ //alert(table)
 
 
-    // Stockage les valeurs sur Localstorage
-    window.localStorage.setItem('UserNom',UserNom );
-    window.localStorage.setItem('UserPrenom',UserPrenom );
-    window.localStorage.setItem('UserLogin',UserLogin );
-    window.localStorage.setItem('UserPassword',UserPassword );
-    window.localStorage.setItem('UserEmail',UserEmail );
-    window.localStorage.setItem('UserAge',UserAge );
-    window.localStorage.setItem('UserGrade',UserGrade );
-    window.localStorage.setItem('UserAdresse',UserAdresse );
-    window.localStorage.setItem('UserTelephone',UserTelephone );
+ // Stockage les valeurs sur Localstorage
+ window.localStorage.setItem('UserNom',UserNom );
+ window.localStorage.setItem('UserPrenom',UserPrenom );
+ window.localStorage.setItem('UserLogin',UserLogin );
+ window.localStorage.setItem('UserPassword',UserPassword );
+ window.localStorage.setItem('UserEmail',UserEmail );
+ window.localStorage.setItem('UserAge',UserAge );
+ window.localStorage.setItem('UserGrade',UserGrade );
+ window.localStorage.setItem('UserAdresse',UserAdresse );
+ window.localStorage.setItem('UserTelephone',UserTelephone );
+
+ redirect()
+   }
+
+   
 }
 

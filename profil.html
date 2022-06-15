@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/profil.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
@@ -25,6 +26,7 @@
                 <div class="card">
 
                     <div class="card-body">
+                        <p onclick="logout()" style="float: right;background: gray;color: white;padding: 15px;font-family: fantasy;border-radius: 7px;cursor: pointer;" >Se déconnecter</p>
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
                                 <div class="image-container">
@@ -62,7 +64,7 @@
                                                 <label  style="font-weight:bold;">Nom</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                               <p id="Nom"></p>
+                                               <p id="Nom"></p> <i onclick="NomEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -71,7 +73,7 @@
                                                 <label style="font-weight:bold;">Prénom</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Prenom"></p>
+                                                <p id="Prenom"></p> <i onclick="PrenomEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -81,7 +83,7 @@
                                                 <label style="font-weight:bold;">Email</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Email"></p>
+                                                <p id="Email"></p> <i onclick="EmailEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -92,7 +94,7 @@
                                                 <label style="font-weight:bold;">Age</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Age"></p>
+                                                <p id="Age"></p> <i onclick="AgeEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -101,7 +103,7 @@
                                                 <label style="font-weight:bold;">Grade</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Grade"></p>
+                                                <p id="Grade"></p> <i onclick="GradeEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -110,7 +112,7 @@
                                                 <label style="font-weight:bold;">Adresse</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Adresse"></p>
+                                                <p id="Adresse"></p> <i onclick="AdresseEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
@@ -119,7 +121,7 @@
                                                 <label style="font-weight:bold;">Telephone</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                <p id="Telephone"></p>
+                                                <p id="Telephone"></p> <i onclick="TelephoneEdit()" class="fas fa-edit"></i>
                                             </div>
                                         </div>
                                         <hr />
